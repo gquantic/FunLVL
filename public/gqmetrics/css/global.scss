@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Regular.ttf');
+  src: local('Circe'), local('Circe-Regular'),
+  url('../fonts/Circe-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-ExtraLight.ttf');
+  src: local('Circe ExtraLight'), local('Circe-ExtraLight'),
+  url('../fonts/Circe-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Thin.ttf');
+  src: local('Circe Thin'), local('Circe-Thin'),
+  url('../fonts/Circe-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Light.ttf');
+  src: local('Circe Light'), local('Circe-Light'),
+  url('../fonts/Circe-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-Bold.ttf');
+  src: local('Circe Bold'), local('Circe-Bold'),
+  url('../fonts/Circe-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circe';
+  src: url('../fonts/Circe-ExtraBold.ttf');
+  src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
+  url('../fonts/Circe-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+
+//
+//::-webkit-scrollbar-track {
+//  @extend .bg-lightBlue;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  @extend .bg-mainBlue;
+//}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px blue;
+  border-radius: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px blue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: unset;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 95%;
+  max-width: 914px;
+  margin: 0 auto;
+}
+
+body {
+  @extend .font-1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-spaceb {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

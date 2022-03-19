@@ -1,0 +1,992 @@
+@import "owl.theme.default.min.css";
+@import "owl.carousel.min.css";
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-Regular.ttf");
+  src: local("Circe"), local("Circe-Regular"), url("../fonts/Circe-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-ExtraLight.ttf");
+  src: local("Circe ExtraLight"), local("Circe-ExtraLight"), url("../fonts/Circe-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-Thin.ttf");
+  src: local("Circe Thin"), local("Circe-Thin"), url("../fonts/Circe-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-Light.ttf");
+  src: local("Circe Light"), local("Circe-Light"), url("../fonts/Circe-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-Bold.ttf");
+  src: local("Circe Bold"), local("Circe-Bold"), url("../fonts/Circe-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Circe";
+  src: url("../fonts/Circe-ExtraBold.ttf");
+  src: local("Circe ExtraBold"), local("Circe-ExtraBold"), url("../fonts/Circe-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+
+.scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px blue;
+  border-radius: 5px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px blue;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: unset;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  width: 95%;
+  max-width: 914px;
+  margin: 0 auto;
+}
+
+.d-flex, body footer .phone-and-privacy, body footer .footer-navigation, body footer .container, body main .seller-offers .item > div, body main .seller-offers .item, body main .seller-and-reviews .seller .write-to-seller, body main .seller-and-reviews .seller .seller-info, body main .seller-and-reviews, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get, body main .chat-content .chat-and-user-info .user-info.kinar .give-get, body main .chat-content .chat-and-user-info .user-info .price, body main .chat-content .chat-and-user-info .user-info .operation-system, body main .chat-content .chat-and-user-info .user-info, body main .chat-content .chat-and-user-info, body main .filter-modal .filters .area-and-apply, body main .filter-modal .filters .selections .item, body main .filter-modal .filters, body main .filter-modal .title-and-close, body main .offers-page .offer-list .item .price, body main .offers-page .offer-list .item .operation-system, body main .offers-page .offer-list .item, body main .offers-page .title-and-filter button, body main .offers-page .title-and-filter, body main .offers-page .title-and-offer, body main .hot-contracts .owl-carousel .item .user-info, body main .hot-contracts .owl-carousel .item .name-and-price, body main .hot-contracts .hot-title-and-offer, body main .page-banner .sellers, body main .page-banner .tabs, body main .avatar-rate, body main .reviews .review-item .author-review, body main .rating, body header .container .logo-and-nav nav ul, body header .container .logo-and-nav, .custom-select .selected {
+  display: flex;
+}
+
+.justify-center, body main .seller-and-reviews .seller .write-to-seller, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get {
+  justify-content: center;
+}
+
+.justify-end, body main .reviews .review-item .author-review {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-spaceb, body footer .phone-and-privacy, body main .seller-offers .item, body main .seller-and-reviews, body main .chat-content .chat-and-user-info .user-info.kinar .give-get, body main .chat-content .chat-and-user-info .user-info, body main .filter-modal .filters, body main .filter-modal .title-and-close, body main .offers-page .offer-list .item, body main .offers-page .title-and-offer, body main .hot-contracts .owl-carousel .item .name-and-price, body main .hot-contracts .hot-title-and-offer, body main .page-banner .tabs, body header .container .logo-and-nav, .custom-select .selected {
+  justify-content: space-between;
+}
+
+.align-center, body main .seller-offers .item > div, body main .seller-and-reviews .seller .write-to-seller, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get, body main .chat-content .chat-and-user-info .user-info.kinar .give-get, body main .chat-content .chat-and-user-info .user-info .price, body main .chat-content .chat-and-user-info .user-info .operation-system, body main .filter-modal .filters .selections .item, body main .offers-page .offer-list .item .price, body main .offers-page .offer-list .item .operation-system, body main .offers-page .title-and-filter button, body main .offers-page .title-and-filter, body main .offers-page .title-and-offer, body main .hot-contracts .owl-carousel .item .user-info, body main .hot-contracts .owl-carousel .item .name-and-price, body main .hot-contracts .hot-title-and-offer, body main .page-banner .sellers, body main .page-banner .tabs, body main .reviews .review-item .author-review, body main .rating, body header .container .logo-and-nav nav ul, body header .container .logo-and-nav, .custom-select .selected {
+  align-items: center;
+}
+
+.align-end, body main .filter-modal .filters .area-and-apply {
+  align-items: flex-end;
+}
+
+.flex-col, body main .filter-modal .filters .area-and-apply {
+  flex-direction: column;
+}
+
+.flex-wrap, body footer .container, body main .chat-content .chat-and-user-info .user-info, body main .page-banner .tabs {
+  flex-wrap: wrap;
+}
+
+.custom-select {
+  width: 100%;
+  position: relative;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.custom-select .selected {
+  padding: 6px 15px;
+  border-radius: 8px;
+  margin-bottom: 7px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  line-height: 22px;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+}
+.custom-select .selected p img {
+  margin-right: 14px;
+}
+.custom-select .options {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  width: 100%;
+  top: 48px;
+  padding: 6px 15px;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 22px;
+  left: 0;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+}
+.custom-select .options .option {
+  padding: 10px 0;
+  cursor: pointer;
+}
+.custom-select .options .option p img {
+  margin-right: 14px;
+}
+
+.color-black {
+  color: black;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.color-orange, body main .chat-content .chat-and-user-info .chat .like-message, body main .hot-contracts .owl-carousel .item .name-and-price .price, body main .page-banner h1, body main .place-offer, body header .container .logo-and-nav nav ul li.active a, body header .container .logo-and-nav nav ul li:hover a {
+  color: #ED9B10;
+}
+
+.bg-orange, body main .seller-and-reviews .seller .write-to-seller, body main .filter-modal .filters .area-and-apply button, body main .filter-modal input:checked + .slider, body main .page-banner .sellers {
+  background-color: #ED9B10;
+}
+
+.color-white, body main .add-item-form form .inp6, body main .seller-and-reviews .seller .write-to-seller, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .filter-modal .filters .area-and-apply button, body main .page-banner .sellers {
+  color: #fff;
+}
+
+.bg-white, body main .seller-offers .item > div, body main .seller-and-reviews .seller .seller-info, body main .chat-content .chat-and-user-info .chat #chat-input, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get, body main .chat-content .chat-and-user-info .user-info .price, body main .chat-content .chat-and-user-info .user-info .operation-system, body main .chat-content .chat-and-user-info .user-info .avatar-rate, body main .chat-content .chat-and-user-info .user-info .account, body main .filter-modal .filters .area-and-apply textarea, body main .filter-modal .slider:before, body main .offers-page .offer-list .item > div, body main .offers-page .offer-list .item > .name, body main .offers-page .title-and-filter button, body main .hot-contracts .owl-carousel .item, body main .reviews .review-item .text, body.chat-page header, .custom-select .selected, .custom-select .options {
+  background-color: #fff;
+}
+
+.color-gray, body main .chat-content .chat-and-user-info .chat #chat-input::placeholder {
+  color: #C4C4C4;
+}
+
+.bg-gray, body main .filter-modal .slider {
+  background-color: #C4C4C4;
+}
+
+.color-main-bg {
+  color: #FAFAFA;
+}
+
+.bg-main-bg, body main .chat-content .chat-and-user-info .chat .chat-box, body.chat-page {
+  background-color: #FAFAFA;
+}
+
+.color-green {
+  color: #9EDA51;
+}
+
+.bg-green, body main .chat-content .chat-and-user-info .user-info.kinar .buy {
+  background-color: #9EDA51;
+}
+
+.font-1, body main .chat-content .chat-and-user-info .chat #chat-input::placeholder, body main .chat-content .chat-and-user-info .chat #chat-input, body, .font-2, body main .seller-and-reviews .seller .write-to-seller, body main .see-all, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .page-banner h1, .font-3, .font-4, body footer .phone-and-privacy, body footer .footer-navigation .nav-item ul li, body main .add-item-form form input, body main .add-item-form form textarea, body main .seller-and-reviews .seller .seller-info .info .description, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get, body main .chat-content .chat-and-user-info .user-info .price, body main .chat-content .chat-and-user-info .user-info .account, body main .filter-modal .filters .area-and-apply textarea::placeholder, body main .offers-page .offer-list .item .price, body main .offers-page .offer-list .item > .name, body main .page-description .desc, body main .avatar-rate .name-rate .name, body main .reviews .review-item, .font-5, body main .seller-and-reviews .seller .seller-info .info .position {
+  font-family: "Circe";
+}
+
+.font-1, body main .chat-content .chat-and-user-info .chat #chat-input::placeholder, body main .chat-content .chat-and-user-info .chat #chat-input, body {
+  font-weight: normal;
+}
+
+.font-2, body main .seller-and-reviews .seller .write-to-seller, body main .see-all, body main .chat-content .chat-and-user-info .user-info.kinar .buy, body main .page-banner h1 {
+  font-weight: bold;
+}
+
+.font-3 {
+  font-weight: 800;
+}
+
+.font-4, body footer .phone-and-privacy, body footer .footer-navigation .nav-item ul li, body main .add-item-form form input, body main .add-item-form form textarea, body main .seller-and-reviews .seller .seller-info .info .description, body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get, body main .chat-content .chat-and-user-info .user-info .price, body main .chat-content .chat-and-user-info .user-info .account, body main .filter-modal .filters .area-and-apply textarea::placeholder, body main .offers-page .offer-list .item .price, body main .offers-page .offer-list .item > .name, body main .page-description .desc, body main .avatar-rate .name-rate .name, body main .reviews .review-item {
+  font-weight: 300;
+}
+
+.font-5, body main .seller-and-reviews .seller .seller-info .info .position {
+  font-weight: 200;
+}
+
+body .banner-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+}
+body header {
+  padding: 18px 0;
+  background: transparent;
+}
+body header .container .logo-and-nav .logo img {
+  width: 67px;
+}
+body header .container .logo-and-nav nav ul li {
+  margin-left: 18px;
+}
+body.chat-page main {
+  padding-top: 70px;
+}
+body main {
+  padding-top: 112px;
+}
+body main .place-offer {
+  font-size: 16px;
+  line-height: 16px;
+  border-bottom: 1px solid;
+}
+body main .rating img {
+  width: 9px;
+}
+body main .rating img.passive {
+  opacity: 0.3;
+}
+body main .reviews .title {
+  font-size: 21px;
+  line-height: 31px;
+  margin-bottom: 11px;
+}
+body main .reviews .review-item {
+  font-size: 15px;
+  line-height: 22px;
+}
+body main .reviews .review-item .text {
+  padding: 10px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+body main .reviews .review-item .author-review {
+  margin-top: 7px;
+}
+body main .reviews .review-item .author-review .avatar {
+  margin-left: 13px;
+  margin-right: 0;
+}
+body main .avatar, body main .msg-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin-right: 11px;
+}
+body main .avatar-rate {
+  padding: 6px 15px;
+  width: 240px;
+}
+body main .avatar-rate .name-rate .name {
+  font-size: 14px;
+  line-height: 21px;
+}
+body main .page-banner h1 {
+  font-size: 35px;
+  line-height: 52px;
+  margin-bottom: 3px;
+}
+body main .page-banner .tabs {
+  max-width: 190px;
+  margin-bottom: 24px;
+}
+body main .page-banner .tabs a {
+  margin-right: 19px;
+  min-width: 40%;
+  font-size: 17px;
+  line-height: 25px;
+  margin-bottom: 8px;
+}
+body main .page-banner .tabs a:nth-child(2n) {
+  margin-right: 0;
+}
+body main .page-banner .sellers {
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 27px;
+  padding-left: 13px;
+  width: 308px;
+  height: 47px;
+  margin-bottom: 32px;
+}
+body main .page-banner .sellers img {
+  margin-left: 12px;
+}
+body main .hot-contracts {
+  margin-bottom: 77px;
+}
+body main .hot-contracts .hot-title-and-offer .hot-title {
+  font-size: 23px;
+  line-height: 34px;
+}
+body main .hot-contracts .owl-container.container {
+  max-width: 934px;
+}
+body main .hot-contracts .owl-carousel .owl-nav {
+  margin-top: 0;
+}
+body main .hot-contracts .owl-carousel .owl-nav button {
+  padding: 0 !important;
+  position: absolute;
+  margin: 0;
+  top: 50px;
+}
+body main .hot-contracts .owl-carousel .owl-nav button:hover {
+  background: transparent;
+  color: initial;
+  text-decoration: none;
+}
+body main .hot-contracts .owl-carousel .owl-nav button.disabled {
+  opacity: 1;
+}
+body main .hot-contracts .owl-carousel .owl-nav button.owl-next {
+  right: -30px;
+}
+body main .hot-contracts .owl-carousel .owl-nav button.owl-prev {
+  left: -20px;
+}
+body main .hot-contracts .owl-carousel .owl-stage-outer {
+  padding: 10px 0 10px 10px;
+}
+body main .hot-contracts .owl-carousel .item {
+  border-radius: 8px;
+  padding: 12px 12px 4px 12px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+  transition: 0.2s;
+  width: 218px;
+  position: relative;
+}
+body main .hot-contracts .owl-carousel .item .more {
+  position: absolute;
+  bottom: 20px;
+  right: 12px;
+}
+body main .hot-contracts .owl-carousel .item:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.44);
+}
+body main .hot-contracts .owl-carousel .item .name-and-price {
+  margin-bottom: 16px;
+}
+body main .hot-contracts .owl-carousel .item .name-and-price .name {
+  font-size: 14px;
+  line-height: 15px;
+  margin-right: 15px;
+}
+body main .hot-contracts .owl-carousel .item .name-and-price .price {
+  font-size: 15px;
+  line-height: 22px;
+}
+body main .hot-contracts .owl-carousel .item .user-info .name-and-rate .name {
+  font-size: 13px;
+  line-height: 19px;
+}
+body main .hot-contracts .owl-carousel .item .user-info .name-and-rate .signed-duration {
+  font-size: 11px;
+  line-height: 16px;
+  opacity: 0.35;
+}
+body main .page-description {
+  margin-bottom: 96px;
+}
+body main .page-description h2 {
+  font-size: 23px;
+  line-height: 34px;
+  margin-bottom: 6px;
+}
+body main .page-description .desc {
+  font-size: 17px;
+  line-height: 20px;
+}
+body main .offers-page .title-and-offer {
+  margin-bottom: 12px;
+}
+body main .offers-page .title-and-filter .hot-title {
+  font-size: 23px;
+  line-height: 34px;
+}
+body main .offers-page .title-and-filter button {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 10px;
+}
+body main .offers-page .offer-list .item {
+  margin-bottom: 9px;
+}
+body main .offers-page .offer-list .item > .name {
+  font-size: 15px;
+  line-height: 22px;
+  padding: 10px 15px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: 296px;
+}
+body main .offers-page .offer-list .item > div {
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+body main .offers-page .offer-list .item .operation-system {
+  padding: 6px 15px;
+  width: 140px;
+  font-size: 13px;
+  line-height: 19px;
+}
+body main .offers-page .offer-list .item .operation-system img {
+  margin-right: 7px;
+}
+body main .offers-page .offer-list .item .price {
+  padding: 6px 15px;
+  width: 223px;
+  font-size: 17px;
+  line-height: 25px;
+}
+body main .filter-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  padding-top: 166px;
+  display: none;
+}
+body main .filter-modal .container {
+  max-width: 744px;
+}
+body main .filter-modal .bg-blur {
+  width: 100%;
+  height: 100%;
+  background: #e5e5e570;
+  backdrop-filter: blur(10px);
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 0;
+}
+body main .filter-modal .switch {
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  width: 26px;
+}
+body main .filter-modal .switch input {
+  display: none;
+}
+body main .filter-modal .slider {
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+body main .filter-modal .slider:before {
+  bottom: 0px;
+  content: "";
+  height: 15px;
+  left: 0px;
+  position: absolute;
+  transition: 0.4s;
+  width: 15px;
+  border-radius: 50%;
+}
+body main .filter-modal .slider.round {
+  border-radius: 8px;
+}
+body main .filter-modal input:checked + .slider:before {
+  transform: translateX(12px);
+}
+body main .filter-modal input:checked + .slider:before:before {
+  border-radius: 50%;
+}
+body main .filter-modal .title-and-close {
+  margin-bottom: 18px;
+}
+body main .filter-modal .title-and-close h2 {
+  font-size: 25px;
+  line-height: 37px;
+}
+body main .filter-modal .filters .selections .item {
+  margin-bottom: 6px;
+}
+body main .filter-modal .filters .selections .item label {
+  margin-right: 12px;
+  font-size: 17px;
+  line-height: 25px;
+  cursor: pointer;
+}
+body main .filter-modal .filters .area-and-apply textarea {
+  background-image: url("../images/placeholder.png");
+  background-repeat: no-repeat;
+  background-position: 15px 16px;
+  width: 397px;
+  height: 80px;
+  resize: none;
+  box-shadow: 1px 7px 15px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  padding: 13px;
+  border: none;
+  font-size: 13px;
+  line-height: 19px;
+}
+body main .filter-modal .filters .area-and-apply textarea::placeholder {
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 19px;
+}
+body main .filter-modal .filters .area-and-apply button {
+  font-size: 17px;
+  line-height: 25px;
+  width: 153px;
+  height: 38px;
+  text-align: center;
+  box-shadow: 0px 2px 9px rgba(240, 157, 18, 0.45);
+  border-radius: 8px;
+  margin-top: 33px;
+}
+body main .chat-content h1 {
+  font-size: 21px;
+  line-height: 31px;
+  margin-bottom: 19px;
+}
+body main .chat-content .chat-and-user-info {
+  margin-bottom: 120px;
+}
+body main .chat-content .chat-and-user-info .user-info {
+  width: 296px;
+  margin-right: 13px;
+}
+body main .chat-content .chat-and-user-info .user-info .account {
+  width: 100%;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 15px;
+  line-height: 22px;
+  min-height: 45px;
+  margin-bottom: 10px;
+}
+body main .chat-content .chat-and-user-info .user-info .avatar-rate {
+  width: 211px;
+  padding: 6px 15px;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+}
+body main .chat-content .chat-and-user-info .user-info .operation-system {
+  width: 76px;
+  padding: 6px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+}
+body main .chat-content .chat-and-user-info .user-info .operation-system span {
+  font-size: 13px;
+  line-height: 19px;
+  margin-left: 6px;
+  padding-top: 4px;
+}
+body main .chat-content .chat-and-user-info .user-info .price {
+  width: 100%;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 17px;
+  line-height: 25px;
+  min-height: 45px;
+  margin-bottom: 36px;
+}
+body main .chat-content .chat-and-user-info .user-info.kinar .avatar-rate, body main .chat-content .chat-and-user-info .user-info.kinar .operation-system {
+  width: 100%;
+  margin-right: 0;
+}
+body main .chat-content .chat-and-user-info .user-info.kinar .give-get {
+  margin-bottom: 16px;
+}
+body main .chat-content .chat-and-user-info .user-info.kinar .give, body main .chat-content .chat-and-user-info .user-info.kinar .get {
+  font-size: 15px;
+  line-height: 22px;
+  height: 45px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: 136px;
+}
+body main .chat-content .chat-and-user-info .user-info.kinar .buy {
+  font-size: 17px;
+  width: 100%;
+  height: 45px;
+  line-height: 25px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 22px;
+}
+body main .chat-content .chat-and-user-info .chat {
+  width: calc(100% - 309px);
+}
+body main .chat-content .chat-and-user-info .chat #chat-circle {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: #5A5EB9;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: white;
+  padding: 28px;
+  cursor: pointer;
+  box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+body main .chat-content .chat-and-user-info .chat .like-message {
+  margin-top: 0px;
+  width: 100%;
+  padding-left: 45px;
+  display: flex;
+  font-size: 12px;
+  line-height: 20px;
+  align-items: center;
+}
+body main .chat-content .chat-and-user-info .chat .like-message img {
+  margin-right: 10px;
+}
+body main .chat-content .chat-and-user-info .chat .btn#my-btn {
+  background: white;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  border-radius: 45px;
+  padding-right: 40px;
+  padding-left: 40px;
+  color: #5865C3;
+}
+body main .chat-content .chat-and-user-info .chat #chat-overlay {
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: none;
+}
+body main .chat-content .chat-and-user-info .chat .chat-box {
+  width: 100%;
+  max-height: 1024px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-box-toggle {
+  float: right;
+  margin-right: 15px;
+  cursor: pointer;
+}
+body main .chat-content .chat-and-user-info .chat .chat-box-header {
+  background: #5A5EB9;
+  height: 70px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 17px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-box-body {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 23px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+body main .chat-content .chat-and-user-info .chat #chat-input {
+  width: 72%;
+  position: relative;
+  height: 44px;
+  padding: 10px 20px;
+  border: 0;
+  resize: none;
+  outline: 0;
+  border-top: none;
+  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 25px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-input > form {
+  margin-bottom: 0;
+}
+body main .chat-content .chat-and-user-info .chat .chat-submit {
+  height: 44px;
+  background: #f09d12;
+  box-shadow: 0 8px 22px rgba(240, 157, 18, 0.35);
+  border-radius: 8px;
+  font-size: 17px;
+  line-height: 25px;
+  color: white;
+  width: 158px;
+  margin-left: 7px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-logs {
+  padding: 20px;
+  height: 300px;
+  overflow-y: scroll;
+  background: #fff;
+  border-radius: 8px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-logs::-webkit-scrollbar {
+  width: 0;
+}
+body main .chat-content .chat-and-user-info .chat .chat-logs::-webkit-scrollbar-thumb {
+  background-color: #5A5EB9;
+}
+@media only screen and (max-width: 500px) {
+  body main .chat-content .chat-and-user-info .chat .chat-logs {
+    height: 40vh;
+  }
+}
+body main .chat-content .chat-and-user-info .chat .chat-msg.user > .msg-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  float: left;
+}
+body main .chat-content .chat-and-user-info .chat .chat-msg.self > .msg-avatar img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  float: right;
+}
+body main .chat-content .chat-and-user-info .chat .cm-msg-text {
+  padding: 10px 15px 10px 15px;
+  color: #666;
+  max-width: 75%;
+  float: left;
+  margin-left: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+body main .chat-content .chat-and-user-info .chat .chat-msg {
+  clear: both;
+}
+body main .chat-content .chat-and-user-info .chat .chat-msg.self .msg-avatar, body main .chat-content .chat-and-user-info .chat .chat-msg.self .like-message {
+  display: none;
+}
+body main .chat-content .chat-and-user-info .chat .chat-msg.self > .cm-msg-text {
+  float: right;
+  margin-right: 0;
+}
+body main .chat-content .chat-and-user-info .chat .cm-msg-button > ul > li {
+  list-style: none;
+  float: left;
+  width: 50%;
+}
+body main .chat-content .chat-and-user-info .chat .cm-msg-button {
+  clear: both;
+  margin-bottom: 70px;
+}
+body main .see-all {
+  font-size: 17px;
+  line-height: 25px;
+}
+body main .seller-and-reviews .seller {
+  width: 295px;
+}
+body main .seller-and-reviews .seller h1 {
+  font-size: 21px;
+  line-height: 31px;
+  margin-bottom: 23px;
+}
+body main .seller-and-reviews .seller .seller-info {
+  padding: 16px;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+body main .seller-and-reviews .seller .seller-info .info {
+  width: calc(100% - 43px);
+}
+body main .seller-and-reviews .seller .seller-info .info .position {
+  font-size: 15px;
+  line-height: 22px;
+  margin-bottom: 9px;
+  margin-top: 5px;
+}
+body main .seller-and-reviews .seller .seller-info .info .description {
+  font-size: 15px;
+  line-height: 20px;
+}
+body main .seller-and-reviews .seller .write-to-seller {
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  width: 100%;
+  height: 42px;
+  font-size: 17px;
+  line-height: 25px;
+  margin-top: 9px;
+  cursor: pointer;
+}
+body main .seller-and-reviews .reviews {
+  width: 551px;
+  position: relative;
+}
+body main .seller-and-reviews .reviews .title {
+  font-size: 21px;
+  line-height: 31px;
+  margin-bottom: 23px;
+}
+body main .seller-and-reviews .reviews .review-item {
+  margin-bottom: 20px;
+}
+body main .seller-and-reviews .reviews .review-item .text {
+  padding: 10px 20px 30px;
+}
+body main .seller-and-reviews .reviews .see-all-review {
+  position: absolute;
+  bottom: 27px;
+}
+body main .seller-offers {
+  margin-top: 17px;
+}
+body main .seller-offers .title {
+  font-size: 21px;
+  line-height: 31px;
+  margin-bottom: 11px;
+}
+body main .seller-offers .item {
+  margin-bottom: 9px;
+}
+body main .seller-offers .item > div {
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  height: 45px;
+  padding: 0 15px;
+}
+body main .seller-offers .item .name {
+  width: 677px;
+}
+body main .seller-offers .item .price {
+  width: 223px;
+}
+body main .seller-offers .see-all {
+  padding-left: 13px;
+  margin-top: 17px;
+}
+body main .add-item-form {
+  margin-bottom: 200px;
+}
+body main .add-item-form form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 19px;
+  grid-row-gap: 12px;
+}
+body main .add-item-form form input, body main .add-item-form form textarea {
+  background: #FFFFFF;
+  box-shadow: -5px 8px 23px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 22px;
+  padding: 12px 15px;
+}
+body main .add-item-form form textarea {
+  height: 102px;
+  resize: none;
+}
+body main .add-item-form form input {
+  height: 45px;
+}
+body main .add-item-form form .inp1 {
+  grid-area: 1/1/2/3;
+}
+body main .add-item-form form .inp2 {
+  grid-area: 2/1/3/3;
+}
+body main .add-item-form form .inp3 {
+  grid-area: 3/1/4/3;
+}
+body main .add-item-form form .inp4 {
+  grid-area: 1/3/3/5;
+}
+body main .add-item-form form .inp5 {
+  grid-area: 3/3/4/5;
+}
+body main .add-item-form form .inp6 {
+  grid-area: 4/4/5/5;
+  background: #F09D12;
+  text-align: center;
+  box-shadow: 0px 8px 22px rgba(240, 157, 18, 0.35);
+}
+body footer {
+  background-image: url(../images/footer-cover.png);
+  padding-top: 126px;
+  padding-bottom: 20px;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+body footer .logo-and-copyright .copyright {
+  font-size: 13px;
+  line-height: 23px;
+  opacity: 0.4;
+}
+body footer .footer-navigation {
+  margin-left: 76px;
+}
+body footer .footer-navigation .nav-item {
+  margin-left: 50px;
+  width: 167px;
+}
+body footer .footer-navigation .nav-item .title {
+  font-size: 23px;
+  line-height: 27px;
+  margin-bottom: 11px;
+}
+body footer .footer-navigation .nav-item ul li {
+  font-size: 15px;
+  line-height: 27px;
+}
+body footer .phone-and-privacy {
+  width: 100%;
+  margin-top: 65px;
+  font-size: 17px;
+  line-height: 27px;
+}
+
+/*# sourceMappingURL=app.css.map */

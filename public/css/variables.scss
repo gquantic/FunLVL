@@ -1,0 +1,48 @@
+$black: black;
+$orange: #ED9B10;
+$white: #fff;
+$gray: #C4C4C4;
+$main-bg: #FAFAFA;
+$green: #9EDA51;
+$theme-colors: (
+        'black' : $black,
+        'orange' : $orange,
+        'white' : $white,
+        'gray' : $gray,
+        'main-bg' : $main-bg,
+        'green' : $green,
+);
+
+
+@each $color, $value in $theme-colors {
+  .color-#{$color} {
+    color: $value;
+  }
+  .bg-#{$color} {
+    background-color: $value;
+  }
+}
+
+.font-1, .font-2, .font-3, .font-4, .font-5 {
+  font-family: "Circe";
+}
+
+.font-1 {
+  font-weight: normal;
+}
+
+.font-2 {
+  font-weight: bold;
+}
+
+.font-3 {
+  font-weight: 800;
+}
+
+.font-4 {
+  font-weight: 300;
+}
+
+.font-5 {
+  font-weight: 200;
+}
