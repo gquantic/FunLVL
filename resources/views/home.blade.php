@@ -41,7 +41,8 @@
                         <p class="name">Гарантия</p>
                         <p class="desc">На сайте присутствует система
                             безопасной сделки. Уберегите себя
-                            от обмана.</p>
+                            от обмана.
+                        </p>
                     </div>
                     <div class="win-item">
                         <p class="name">Партнерство</p>
@@ -76,7 +77,33 @@
 {{--                    </div>--}}
 {{--                    @endforeach--}}
 
-
+                    <div class="item" style="background-image: url('images/Rectangle 3.png')">
+                        <a href="">Pubg Mobile</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 5.png')">
+                        <a href="">Mobile Legends</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 6.png')">
+                        <a href="">League Of Legends</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 7.png')">
+                        <a href="">Aion</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 8.png')">
+                        <a href="">Aion</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 5.png')">
+                        <a href="">Pubg Mobile</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 6.png')">
+                        <a href="">Pubg Mobile</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 4.png')">
+                        <a href="">Mobile Legends</a>
+                    </div>
+                    <div class="item" style="background-image: url('images/Rectangle 5.png')">
+                        <a href="">League Of Legends</a>
+                    </div>
                 </div>
                 <a href="{{ route('shop.games') }}" class="see-all-review see-all">
                     <span>Все игры</span>
@@ -104,6 +131,7 @@
                         <a href="#" class="more"><img src="{{ asset('images/right.png') }}" alt=""></a>
                     </div></a>
                     @endforeach
+
                 </div>
                 <a href="{{ route('market') }}" class="see-all-review see-all">
                     <span>Все предложения</span>

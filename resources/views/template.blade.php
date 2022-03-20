@@ -10,8 +10,10 @@
     <meta property="og:description" content="FunLVL"/>
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
     <link href="{{ asset('css/self-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.scss') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.min.css') }}" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #fafafa;!important;">
 <x-header/>
 @yield('main')
 <x-footer/>
