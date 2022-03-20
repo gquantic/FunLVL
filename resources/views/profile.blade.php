@@ -9,7 +9,7 @@
             <div class="form-group">
                 <label for="">Аватар</label>
                 @if($user->data)
-                    <img src="{{ asset($user->data->avatar_path) }}" alt="">
+                    <img src="{{ asset($user->data->avatar_path) }}" alt="" width="100px">
                 @endif
                 <input type="file" name="avatar" class="form-control">
             </div>

@@ -9,6 +9,7 @@
     <meta property="og:site_name" content="FunLVL"/>
     <meta property="og:description" content="FunLVL"/>
     <link rel="stylesheet" href="{{ asset('css/app.min.css') }}">
+    <link href="{{ asset('css/self-styles.css') }}" rel="stylesheet">
 </head>
 <body>
 <x-header/>
@@ -18,5 +19,8 @@
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 <script src="{{ asset('js/socket.js') }}"></script>
+<script src="{{ asset('js/vendors.min.js') }}"></script>
+{{--<script src="{{ asset('js/components.css') }}"></script>--}}
+{{--<script src="{{ asset('js/components.min.css') }}"></script>--}}
 </body>
 </html>

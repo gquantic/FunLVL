@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/self-styles.css') }}" rel="stylesheet">
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
